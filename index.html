@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>personal portfolio</title>
+<style>
+    body{
+        background-color: black;
+        
+        
+    }
+    .firstbody{
+        background-image: url("desktop-wallpaper-portfolio.jpg");
+        overflow-y:visible;
+        background-repeat: no-repeat;
+        height: 900px;
+        width:auto;
+        margin: auto;
+        background-size:cover;
+    }
+    .navlinks{
+        list-style:none;
+        display:flex;
+        gap:35px;
+        position: absolute;
+        left:950px;
+        top:20px;
+        position: fixed;
+        
+        }
+    .link a{
+        text-decoration:none;
+        color:white;
+        opacity:1;
+        font-size:14.5px;
+    }
+    .link a:hover{
+        color:gray;
+        }
+    .githublogo{
+        position:fixed;
+        top:4px;
+        left:1480px;
+        color:white;
+    }
+    .githublogo a:hover{
+        color:gray;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+          }
+          
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 40px;
+            height:0px;
+            background-color:black;
+            color:rgb(167, 167, 167);
+            text-align: center;
+            border-radius: 6px;
+            padding: 1px 0;
+            position:fixed;
+            top:0%;
+            left:1470px;
+            border-radius:20%;
+          }
+          
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
+   .middlebox{
+        color:white;
+        height:800px;
+        opacity: 1px;
+        width:900px;
+    }
+    .middlebox h1{
+        padding: 200px 150px;
+        font-size:55px;
+    }.middlebox p{
+       position: absolute;
+       top:400px;
+       left:150px;
+       font-size:x-large;
+       list-style: circle;
+       white-space:initial;
+    }
+    #downloadButton {
+        background-color:gray;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        position: absolute;
+        top:500px;
+        left:150px;
+    }
+    .footer__head{
+    list-style:none;
+    display:flex;
+    height:90%;
+    gap:300px;
+    background-color:#6b7280;
+    font-weight: 300;
+    
+    
+}
+.footer__head p{
+    font-weight: 500px;
+    
+    
+}
+.column1{
+    padding:8px;
+    font-size: 14.4px;
+    font-weight: 200;
+    color:#363636;
+}
+.column2{
+    padding:8px;
+    font-size: 14.4px;
+    font-weight: 200;
+    color:#363636;
+    
+}
+.column3{
+    padding:8px;
+    font-size: 14.4px;
+    font-weight: 200;
+    color:#363636;
+    
+}
+.column4{
+    padding:10px 5px 10px 10px;
+    font-size: 14.4px;
+    font-weight: 200;
+    color:#363636;
+    align-items: center;
+ 
+    }
+        
+ 
+</style>
+</head>
+<body >
+    <script>
+        const downloadButton = document.getElementById('downloadButton');
+const pdfUrl = 'https://drive.google.com/file/d/1JbhC0HaplM3-tFyM1svMvXkqRiIWkBGa/view?usp=sharing';
+
+downloadButton.addEventListener('click', () => {
+  
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = 'APSSDC B2 PD 1-2521-2240.pdf';
+
+  link.click();
+});
+    </script>
+    <div class="firstbody">
+        <header background-color="black">
+            
+            <ul class="navlinks">
+            <li class="link"><a href="#home">HOME</a></li>
+            <li class="link"><a href="#about">ABOUT</a></li>
+            <li class="link"><a href="#projects">PROJECTS</a></li>
+            <li class="link"><a href="#CERFICATES">CERFITICATES</a></li>
+            <li class="link"><a href="#contact">CONTACTS</a></li>
+            
+            </ul>
+            <div class="tooltip">
+                <a href='#github'><p class="githublogo"><i class="fa-brands fa-github fa-2x"></i></p></a>
+                <span class="tooltiptext">github</span>
+              </div>
+            
+        </header>
+        <div class="middlebox">
+            <h1>Hi,<br>I'm Nikhil,</h1>
+            <p>"I AM  A  PRACTICING  MACHINE  LEARNING  ENGINEER"</p>
+        </div>
+        <button id="downloadButton">Download Resume</button>
+    </div>
+    <footer>
+        
+            <div class="footer__head">    
+                <div class="column1">
+        
+                    <h4>--CONTACT INFO--</h4>
+                    <p><i class="fa-solid fa-location-dot"></i>Andhra Pradesh,India</p>    
+                    <p><i class="fa-solid fa-phone">:(+91)7013428310</i></p>
+                        <p><i class="fa-regular fa-envelope"></i>nikhiltharlada310@gmail.com</p>
+                </div>
+                <div class="column2">
+                    <h4>----</h4>
+                    <p>Home</p>
+                    <p>About Us</p>
+                    <P>Certificates</P>
+                    <P>PROJECTS</P>
+                    
+                </div>
+                
+                <div class="column3">
+                    <h4>--SOCIAL MEDIA--</h4>
+                        
+        
+                        <p><i class="ri-instagram-line"></i></p>
+                        <p><i class="ri-facebook-circle-line"></i></p>
+                        <p><i class="ri-twitter-x-line"></i></p>
+                
+                </div>
+            </div>   
+            
+    </footer>
+</body>
+</html>
