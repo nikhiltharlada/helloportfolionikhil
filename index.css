@@ -135,8 +135,7 @@
     margin-right: 8px;
     color: #e1e1e1;
   }
-
-  @media (max-width: 700px) {
+  @media (max-width: 767px) {
     .navlinks {
       flex-direction: column;
       background-color: rgba(0, 0, 0, 0.9);
