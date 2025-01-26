@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="index.css"/>
+
+  <link rel="stylesheet" href="D:\work\build\portfoilo\ceritificates.css">
 </head>
 <body>
   <header>
@@ -23,12 +24,47 @@
 
   <div class="firstbody">
     <div class="middlebox">
-      <h1>Hi,<br>I'm Nikhil</h1>
-      <p>"I AM A PRACTICING MACHINE LEARNING ENGINEER"</p>
+      <table class="certi-table">
+        <tr>/*row 1*/
+          <td>
+          <div class="card">
+            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div> 
+            <div class="back">
+              <h2>Backside 1</h2>
+              <p>Content for image 1</p>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="card">
+          <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div> 
+          <div class="back">
+            <h2>Backside 1</h2>
+            <p>Content for image 1</p>
+          </div>
+        </div>
+      </div>
+      </td>
+      <td>
+        <div class="card">
+          <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div> 
+          <div class="back">
+            <h2>Backside 1</h2>
+            <p>Content for image 1</p>
+          </div>
+        </div>
+      </div>
+      </td>
+        </tr>
+       
+        
+      </table>
     </div>
-    <button id="downloadButton">Download Resume</button>
   </div>
-
+<div class="declaration">
+    <p>These Certificates demonstrate my achievements, including the <strong>Artificial Intelligence and Machine Learning</strong> internship project, showcasing my skills and dedication to the field.</p>
+</div>
   <footer>
     <div class="footer__head">
       <div>
@@ -52,26 +88,5 @@
       </div>
     </div>
   </footer>
-  <script>
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.navlinks');
-    const menuIcon = menuBtn.querySelector('i');
-
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-times');
-    });
-
-    const downloadButton = document.getElementById('downloadButton');
-    const pdfUrl = 'https://drive.google.com/file/d/1JbhC0HaplM3-tFyM1svMvXkqRiIWkBGa/view?usp=sharing';
-
-    downloadButton.addEventListener('click', () => {
-      const link = document.createElement('a');
-      link.href = pdfUrl;
-      link.target = '_blank';
-      link.click();
-    });
-  </script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+## Setting Up GitHub Pages for Free Hosting
+
+**GitHub Pages** is a static website hosting service that's part of GitHub. It's a great option for simple websites like portfolios, blogs, and documentation, especially if you're already using GitHub for version control.
+
+### Step-by-Step Guide:
+
+1. **Create a GitHub Account:** If you don't have one already, sign up for a free GitHub account at [https://github.com/](https://github.com/).
+
+2. **Create a New Repository:**
+   - Go to your GitHub dashboard and click on the green "New repository" button.
+   - Give your repository a name, preferably the same as your website's domain name (e.g., "my-portfolio").
+   - Make sure the repository is public.
+   - Click "Create repository."
+
+3. **Add Your Website Files:**
+   - Create a local folder on your computer with the same name as your repository (e.g., "my-portfolio").
+   - Create the necessary HTML, CSS, and JavaScript files for your website.
+   - Use a Git client (like Git Bash, GitKraken, or GitHub Desktop) to initialize a Git repository in your local folder.
+   - Add your files to the Git repository using the `git add .` command.
+   - Commit your changes using the `git commit -m "Initial commit"` command.
+   - Push your changes to your GitHub repository using the `git push -u origin main` command.
+
+4. **Configure GitHub Pages:**
+   - Go to your repository on GitHub.
+   - Click on the "Settings" tab.
+   - Scroll down to the "GitHub Pages" section.
+   - Under "Source," select the "main" branch.
+   - Click "Save."
+
+5. **View Your Website:**
+   - GitHub Pages will automatically generate a URL for your website. You can find it in the "GitHub Pages" section.
+   - Click on the link to view your website.
+
+### Additional Tips:
+
+* **Custom Domain:** If you have a custom domain, you can connect it to your GitHub Pages website using a DNS provider.
+* **Custom Themes:** You can use pre-built themes or create your own custom designs using CSS.
+* **Build Automation:** Consider using tools like Jekyll, Hugo, or Gatsby to automate the building of your website from static files.
+* **Collaboration:** Multiple contributors can work on your website using GitHub's collaboration features.
+
+**Remember:** GitHub Pages is designed for static websites. If you need dynamic content or complex features, you might need a more traditional web hosting service.
