@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="about.css" />  </head>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="navlinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="ceritificates.html">CERTIFICATES</a></li>
+            
+            <li><a href="https://github.com/nikhiltharlada" target="_blank" class="github-link"><i
+                        class="fab fa-github"></i>
+                    GitHub</a></li>
+        </ul>
+    </header>
+
+    <section id="about" class="about-content">
+        <h2>About Me</h2>
+        <img src="profile_picture.jpg" alt="Your Profile Picture">
+        <p>I'm Nikhil, a passionate and dedicated machine learning engineer... (Your about text here)</p>
+        <p>I'm a firm believer in continuous learning... (Your about text here)</p>
+        <p>Beyond my technical skills, I possess strong... (Your about text here)</p>
+    </section>
+
+    <div class="footer__head">
+        <div>
+            <h4>CONTACT INFO</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
+            <p><i class="fa-solid fa-phone"></i> (+91) 7013428310</p>
+            <p><i class="fa-regular fa-envelope"></i> nikhiltharlada310@gmail.com</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="ceritificates.html">Certificates</a></p>
+            <p><a href="projects.html">Projects</a></p>
+        </div>
+        <div>
+            <h4>Social Media</h4>
+            <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+            <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+            <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Developed by Nikhil</p>
+    </footer>
+    <script>
+        // JavaScript remains the same
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.navlinks');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+
+</html>

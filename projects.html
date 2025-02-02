@@ -1,205 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="ceritificates.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="projects.css">
 </head>
+
 <body>
-  <header>
-    <h1>Portfolio</h1>
-    <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
-    <ul class="navlinks">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="projects.html">PROJECTS</a></li>
-      <li><a href="ceritificates.html">CERTIFICATES</a></li>
-      <li><a href="#contact">CONTACTS</a></li>
-      <li class="githublogo"><a href="https://github.com/nikhiltharlada" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
-    </ul>
-  </header>
+    <header>
+        <h1>Portfolio</h1>
+        <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="navlinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="ceritificates.html">CERTIFICATES</a></li>
+            
+            <li class="githublogo"><a href="https://github.com/nikhiltharlada" target="_blank"><i
+                        class="fa-brands fa-github"></i> GitHub</a></li>
+        </ul>
+    </header>
 
-  <div class="firstbody">
-    <div class="middlebox">
-      <div class="image-table-container">
-        <!-- Image Card 1 -->
+    <div class="firstbody">
+        <div class="middlebox">
+            <div class="btns">
+                <h1 class="title"><strong>ALL PROJECTS</strong></h1>
+                <button class="btn" onclick="showContent('AI')">AI</button>
+                <button class="btn" onclick="showContent('WEB')">WEB<br>DEVELOPEMENT</button>
+                <button class="btn" onclick="showContent('ML')">ML</button>
+                <button class="btn" onclick="showContent('DL')">DL</button>
+            </div>
+            <div id="AI" class="content active">
+                <h2>Welcome to the projects of 'AI'</h2>
 
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 1</h2>
-              <p>Content for image 1</p>
-            </div>
-          </div>
-        </div>
-        <!-- Image Card 2 -->
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 2</h2>
-              <p>Content for image 2</p>
-            </div>
-          </div>
-        </div>
-       <!-- Image Card 3 -->
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 3</h2>
-              <p>Content for image 3</p>
-            </div>
-          </div>
-        </div>
-        <!-- Image Card 4 -->
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 4</h2>
-              <p>Content for image 4</p>
-            </div>
-          </div>
-        </div>
-        <!-- Image Card 5 -->
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 5</h2>
-              <p>Content for image 5</p>
-            </div>
-          </div>
-        </div>
-        <!-- Image Card 6 -->
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 6</h2>
-              <p>Content for image 6</p>
-            </div>
-          </div>
-        </div>
-        <!-- Image Card 7 -->
-        <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 7</h2>
-              <p>Content for image 7</p>
-            </div>
-          </div>
-        </div>
-         <!-- Image Card 8 -->
-         <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 8</h2>
-              <p>Content for image 8</p>
-            </div>
-          </div>
-        </div>
-         <!-- Image Card 9 -->
-         <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 9</h2>
-              <p>Content for image 9</p>
-            </div>
-          </div>
-        </div>
-         <!-- Image Card 10 -->
-         <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 10</h2>
-              <p>Content for image 10</p>
-            </div>
-          </div>
-        </div>
-         <!-- Image Card 11 -->
-         <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 11</h2>
-              <p>Content for image 11</p>
-            </div>
-          </div>
-        </div>
-         <!-- Image Card 12 -->
-         <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 12</h2>
-              <p>Content for image 12</p>
-            </div>
-          </div>
-        </div>
-         <!-- Image Card 13 -->
-         <div class="image-card">
-          <div class="card-inner">
-            <div class="front" style="background-image: url('desktop-wallpaper-portfolio.jpg');"></div>
-            <div class="back">
-              <h2>Backside 13</h2>
-              <p>Content for image 13</p>
-            </div>
-          </div>
-        </div>
+                <div class="image-gallery">
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 1" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 1. You can put any HTML here.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 2" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 2.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="AI Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about AI Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
 
-      </div>
+                </div>
+            </div>
+
+            <div id="WEB" class="content">
+                <h2>Welcome to the projects of 'WEB DEVELOPEMENT'</h2>
+
+                <div class="image-gallery">
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="About Image 1" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about About Image 1.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="About Image 2" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about About Image 2.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="About Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about About Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+
+            <div id="ML" class="content">
+                <h2>Welcome to the projects of 'ML'</h2>
+
+                <div class="image-gallery">
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="Contact Image 1" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about Contact Image 1.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="Contact Image 2" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about Contact Image 2.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="Contact Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about Contact Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="DL" class="content">
+                <h2>Welcome to the projects of 'DL'</h2>
+
+                <div class="image-gallery">
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="Contact Image 1" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about Contact Image 1.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="Contact Image 2" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about Contact Image 2.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="desktop-wallpaper-portfolio.jpg" alt="Contact Image 3" width="300">
+                        <figcaption>
+                            <button class="collapsible-image">click here for more details</button>
+                            <div class="content-collapsible-image">
+                                <p>More details about Contact Image 3.</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+
+        </div>
     </div>
-  </div>
-  
-<div class="main_footer">
-  <div class="declaration">
-    <p>These Certificates demonstrate my achievements, including the <strong>Artificial Intelligence and Machine Learning</strong> internship project, showcasing my skills and dedication to the field.</p>
-  </div>
-    <div class="footer__head">
-      <div>
-        <h4>CONTACT INFO</h4>
-        <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
-        <p><i class="fa-solid fa-phone"></i> (+91) 7013428310</p>
-        <p><i class="fa-regular fa-envelope"></i> nikhiltharlada310@gmail.com</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="#about">About</a></p>
-        <p><a href="ceritificates.html">Certificates</a></p>
-        <p><a href="#projects">Projects</a></p>
-      </div>
-      <div>
-        <h4>Social Media</h4>
-        <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
-        <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
-        <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
-      </div>
-    </div>
-  <footer>
-    <p>© 2025 Developed by Nikhil</p>
-  </footer>
-</div>
-<script>
-  const menuBtn = document.querySelector('.menu-btn');
-  const navLinks = document.querySelector('.navlinks');
-  const menuIcon = menuBtn.querySelector('i');
 
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuIcon.classList.toggle('fa-bars');
-    menuIcon.classList.toggle('fa-times');
-  });
-</script>
+
+    </div>
+    </div>
+
+    <div class="main_footer">
+        <div class="declaration">
+            <p>These Certificates demonstrate my achievements, including the <strong>Artificial Intelligence and Machine
+                    Learning</strong> internship project, showcasing my skills and dedication to the field.</p>
+        </div>
+        <div class="footer__head">
+            <div>
+                <h4>CONTACT INFO</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
+                <p><i class="fa-solid fa-phone"></i> (+91) 7013428310</p>
+                <p><i class="fa-regular fa-envelope"></i> nikhiltharlada310@gmail.com</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="#about">About</a></p>
+                <p><a href="ceritificates.html">Certificates</a></p>
+                <p><a href="#projects">Projects</a></p>
+            </div>
+            <div>
+                <h4>Social Media</h4>
+                <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </p>
+                <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+                <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+            </div>
+        </div>
+        <footer>
+            <p>© 2025 Developed by Nikhil</p>
+        </footer>
+    </div>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.navlinks');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+        function showContent(section) {
+            document.querySelectorAll('.content').forEach(div => {
+                div.classList.remove('active');
+            });
+            document.getElementById(section).classList.add('active');
+        }
+
+        const collImages = document.getElementsByClassName("collapsible-image");
+
+        for (let j = 0; j < collImages.length; j++) {
+            collImages[j].addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                content.classList.toggle("show");
+
+                // Change button text
+                if (this.classList.contains("active")) {
+                    this.textContent = "Click here to close"; // Or this.innerHTML if you have HTML in the button
+                } else {
+                    this.textContent = "Click here for more details"; // Or this.innerHTML
+                }
+            });
+        }
+
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+                navLinks.classList.remove('active');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+    </script>
 
 </body>
+
 </html>

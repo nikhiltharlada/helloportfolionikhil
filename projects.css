@@ -1,26 +1,25 @@
 @charset "UTF-8";
 
-/* General Reset */
+/* styles.css */
+
+/* General Reset and Body Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Make the body full height and flex container */
 body {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  min-height: 100vh; /* Ensure it spans the full viewport height */
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: gray;
   color: white;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
-/* Header styling */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -32,13 +31,13 @@ header {
   z-index: 10;
 }
 
-/* Navigation links */
 .navlinks {
   display: flex;
   gap: 20px;
   list-style: none;
   transition: max-height 0.3s ease;
   overflow: hidden;
+  /* Important for mobile menu */
 }
 
 .navlinks li a {
@@ -51,9 +50,9 @@ header {
   color: gray;
 }
 
-/* Menu button (for mobile) */
 .menu-btn {
   display: none;
+  /* Hidden by default on larger screens */
   background: none;
   border: none;
   color: white;
@@ -65,78 +64,148 @@ header {
   transition: transform 0.3s ease;
 }
 
-/* Main content styling */
+/* Main Content */
 .firstbody {
-  flex: 1; /* Allows this section to grow and take remaining space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Vertically center content */
   text-align: center;
   padding-top: 60px;
+  /* Adjust for fixed header */
   background-color: grey;
 }
 
-/* Scrollable section */
 .middlebox {
   flex-wrap: wrap;
   flex-grow: initial;
-  padding: 20px;
+  max-width: 80%;
+  /* Prevents content from stretching too wide */
 }
 
-/* Image table grid */
-.image-table-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px;
-  padding: 20px;
+.content {
+  display: none;
 }
 
-.image-card {
-  width: 300px; /* Card width */
-  height: 400px; /* Card height */
-  perspective: 1000px; /* Creates the 3D effect */
+.active {
+  display: block;
+  /* Show active content */
 }
 
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease-in-out;
+.title {
+  color: black;
 }
 
-.image-card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.front, .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.front {
-  background-size: cover;
-  background-position: center;
-  background-color: #ccc;
-}
-
-.back {
-  background-color: #333;
-  color: #fff;
-  transform: rotateY(180deg);
+.btns {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  column-gap: 2rem;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
   align-items: center;
-  text-align: center;
-  padding: 20px;
 }
 
-/* Footer container styling */
+.btn {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  transition: scale 0.25s ease-in, opacity 0.25s ease-in, filter 0.25s ease-in;
+}
+
+.btn:hover {
+  scale: 1.2;
+}
+
+.btns:has(.btn:hover) .btn:not(:hover) {
+  scale: 0.8;
+  opacity: 0.8;
+  filter: blur(4px);
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image-gallery figure {
+  margin: 0 1rem 1rem 0;
+  text-align: center;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.image-gallery figcaption {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Collapsible Image Styles */
+.collapsible-image {
+  background-color: transparent;
+  color: black;
+  /* Or a darker color */
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: inherit;
+  padding: 0;
+}
+
+.collapsible-image:hover,
+.collapsible-image.active {
+  color: #f5f5f5;
+  /* Or a lighter color */
+}
+
+.content-collapsible-image {
+  padding: 5px 0;
+  display: none;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 200px;
+  /* Adjust as needed */
+}
+
+.content-collapsible-image.show {
+  display: block;
+}
+
+.collapsible-image:after {
+  content: '\002B';
+  /* Plus sign */
+  color: gray;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible-image.active:after {
+  content: "\2212";
+  /* Minus sign */
+}
+
+/* Footer */
 .main_footer {
   background-color: black;
   color: white;
@@ -158,12 +227,11 @@ header {
 
 .footer__head h4 {
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
 .footer__head a {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   font-size: 14px;
 }
 
@@ -176,17 +244,16 @@ header {
   color: #e1e1e1;
 }
 
-/* Footer copyright */
 footer {
   background-color: #6b7280;
   color: #e1e1e1;
   text-align: center;
   padding: 10px;
   width: 100%;
-  margin-top: auto; /* Pushes the footer to the bottom */
+  margin-top: auto;
+  /* Push footer to the bottom */
 }
 
-/* Declaration (scrolling text) */
 .declaration {
   animation: scroll-left 20s linear infinite;
   white-space: nowrap;
@@ -194,32 +261,35 @@ footer {
   padding: 10px 0;
 }
 
-/* Keyframe for scrolling declaration */
 @keyframes scroll-left {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(-100%);
   }
 }
 
-/* Responsive navigation */
+/* Responsive Navigation */
 @media (max-width: 767px) {
   .navlinks {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 60px;
+    /* Adjust if your header height is different */
     right: 0;
     width: 100%;
     max-height: 0;
+    /* Initially hidden */
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
 
   .navlinks.active {
-    max-height: 300px; /* Adjust height when menu is active */
+    max-height: 300px;
+    /* Adjust as needed */
   }
 
   .navlinks li {
@@ -229,11 +299,19 @@ footer {
 
   .menu-btn {
     display: block;
+    /* Shown on smaller screens */
   }
-  .image-table-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Display 1 column instead of 4 */
-    gap: 20px;
-    padding: 20px;
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0.4vh;
+    height: 200px;
+    /* Or auto */
+    width: fit-content;
+    /* Or a specific width like 100px */
+    margin: 0 auto;
+    /* Center the buttons */
   }
 }
