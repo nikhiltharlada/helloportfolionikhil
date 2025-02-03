@@ -1,39 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul class="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="contact-content">
-        <h2>Get in Touch</h2>
-        <p>Feel free to reach out to us via the form below.</p>
-        <form class="contact-form">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <textarea id="message" placeholder="Message" rows="5" required></textarea>
-            <button type="submit" id="submit-btn">Send</button>
-        </form>
-        <p id="form-message" style="display: none; color: green; margin-top: 10px;">Message sent successfully!</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Contact Page. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+  <header>
+    <h1>Portfolio</h1>
+    <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+    <ul class="navlinks">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="ceritificates.html">CERTIFICATES</a></li>
+      <li class="githublogo"><a href="https://github.com/nikhiltharlada" target="_blank"><i
+            class="fa-brands fa-github"></i> GitHub</a></li>
+    </ul>
+  </header>
+
+  <div class="firstbody">
+    <div class="middlebox">
+                    <section class="contact-content">
+                        <h2>Get in Touch</h2>
+                        <p>Feel free to reach out to us via the form below.</p>
+                        <form class="contact-form">
+                            <input type="text" id="name" placeholder="Name">
+                            <input type="email" id="email" placeholder="Email">
+                            <textarea id="message" placeholder="Message" rows="5"></textarea>
+                            <button type="submit" id="submit-btn">Send</button>
+                        </form>
+                        <p id="form-message" style="display: none; color: green; margin-top: 10px;">Message sent
+                            successfully!</p>
+                    </section>
+                </div>
+            </div>
+            <div class="footer__head">
+                <div>
+                    <h4>CONTACT INFO</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
+                    <p><i class="fa-solid fa-phone"></i> (+91) 7013428310</p>
+                    <p><i class="fa-regular fa-envelope"></i> nikhiltharlada310@gmail.com</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="ceritificates.html">Certificates</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                </div>
+                <div>
+                    <h4>Social Media</h4>
+                    <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></p>
+                    <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    </p>
+                    <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    </p>
+                </div>
+            
+            </div>
+            <footer>
+                <p>© 2025 Developed by Nikhil</p>
+            </footer>
+            <script>
+                // JavaScript remains the same
+                const menuBtn = document.querySelector('.menu-btn');
+                const navLinks = document.querySelector('.navlinks');
+                const menuIcon = menuBtn.querySelector('i');
+
+                menuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuIcon.classList.toggle('fa-bars');
+                    menuIcon.classList.toggle('fa-times');
+                });
+            </script>
 </body>
+
 </html>
