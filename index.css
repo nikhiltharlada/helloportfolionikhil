@@ -136,7 +136,18 @@ footer {
   margin-right: 8px;
   color: #e1e1e1;
 }
-
+.contact-button{
+  height:30px;
+  width: 50px;
+  color:black;
+  cursor: pointer;
+  border-radius:8px;
+  border: none;
+  background-color: gray;
+}
+.contact-button:hover{
+  scale:0.8;
+}
 @media (max-width: 767px) {
   .navlinks {
     flex-direction: column;

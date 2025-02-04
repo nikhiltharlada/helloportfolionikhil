@@ -122,15 +122,25 @@ header {
   clear: both;
 }
 
-@media (max-width: 600px) {
-  .about-content img {
-    float: none;
-    margin: 0 auto;
-    display: block;
-    max-width: 250px;
-  }
+.contact-button{
+  background-color:black;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height:40px;
+  text-decoration: none;
+  position: absolute;
+  top:350px;
+  right:650px;
 }
 
+.contact-button:hover {
+  background-color:white;
+  color:tomato
+}
 /* Footer container styling */
 .main_footer {
   background-color: black;
@@ -181,23 +191,6 @@ footer {
   margin-top: auto; /* Pushes the footer to the bottom */
 }
 
-/* Declaration (scrolling text) */
-.declaration {
-  animation: scroll-left 20s linear infinite;
-  white-space: nowrap;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Keyframe for scrolling declaration */
-@keyframes scroll-left {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 
 /* Responsive navigation */
 @media (max-width: 767px) {
@@ -225,4 +218,7 @@ footer {
   .menu-btn {
     display: block;
   }
+  .contact-button{position: absolute;
+  top:800px;
+right:150px;}
 }

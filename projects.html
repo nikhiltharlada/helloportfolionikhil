@@ -227,8 +227,7 @@
 
     <div class="main_footer">
         <div class="declaration">
-            <p>These Certificates demonstrate my achievements, including the <strong>Artificial Intelligence and Machine
-                    Learning</strong> internship project, showcasing my skills and dedication to the field.</p>
+            <p>I declare that the work in this portfolio is my original creation and has not been submitted elsewhere. All sources and references have been properly acknowledged</p>
         </div>
         <div class="footer__head">
             <div>
@@ -242,7 +241,7 @@
                 <p><a href="index.html">Home</a></p>
                 <p><a href="#about">About</a></p>
                 <p><a href="ceritificates.html">Certificates</a></p>
-                <p><a href="#projects">Projects</a></p>
+                <p><a href="projects.html">Projects</a></p>
             </div>
             <div>
                 <h4>Social Media</h4>
@@ -251,7 +250,6 @@
                 <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
                 <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
             </div>
-            <Button class="contact-button"><a href="index.html">contact</a></Button>
         </div>
         <footer>
             <p>© 2025 Developed by Nikhil</p>
@@ -282,12 +280,10 @@
                 this.classList.toggle("active");
                 const content = this.nextElementSibling;
                 content.classList.toggle("show");
-
-                // Change button text
                 if (this.classList.contains("active")) {
-                    this.textContent = "Click here to close"; // Or this.innerHTML if you have HTML in the button
+                    this.textContent = "Click here to close";
                 } else {
-                    this.textContent = "Click here for more details"; // Or this.innerHTML
+                    this.textContent = "Click here for more details";
                 }
             });
         }

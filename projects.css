@@ -255,7 +255,7 @@ footer {
 }
 
 .declaration {
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 18s linear infinite;
   white-space: nowrap;
   text-align: center;
   padding: 10px 0;
@@ -307,7 +307,7 @@ footer {
     flex-direction: column;
     gap: 10px;
     padding: 0.4vh;
-    height: 200px;
+    height: 250px;
     /* Or auto */
     width: fit-content;
     /* Or a specific width like 100px */
