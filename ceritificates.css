@@ -7,23 +7,20 @@
   box-sizing: border-box;
 }
 
-/* Make the body full height and flex container */
+/* Body and General Layout */
 body {
   display: flex;
   flex-direction: column;
-  /* Stack elements vertically */
   min-height: 100vh;
-  /* Ensure it spans the full viewport height */
   margin: 0;
   padding: 0;
-  background-color: gray;
+  background-color: #333;
   color: white;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
-  /* Prevent horizontal scrolling */
 }
 
-/* Header styling */
+/* Header Styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +32,10 @@ header {
   z-index: 10;
 }
 
-/* Navigation links */
+header h1 {
+  font-size: 24px;
+}
+
 .navlinks {
   display: flex;
   gap: 20px;
@@ -64,45 +64,37 @@ header {
   cursor: pointer;
 }
 
-.menu-btn i {
-  transition: transform 0.3s ease;
-}
-
-/* Main content styling */
+/* Main Content Area */
 .firstbody {
   flex: 1;
-  /* Allows this section to grow and take remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 60px;
-  background-color: grey;
+  padding-top: 80px; /* Adjusted for fixed header */
+  background-color: #444;
 }
 
-/* Scrollable section */
 .middlebox {
+  display: flex;
   flex-wrap: wrap;
-  flex-grow: initial;
+  justify-content: center;
   padding: 20px;
 }
 
-/* Image table grid */
 .image-table-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* 4 columns */
   gap: 20px;
   padding: 20px;
+  width: 100%;
 }
 
+/* Image Card Styles */
 .image-card {
   width: 300px;
-  /* Card width */
   height: 400px;
-  /* Card height */
   perspective: 1000px;
-  /* Creates the 3D effect */
 }
 
 .card-inner {
@@ -130,7 +122,6 @@ header {
 .front {
   background-size: cover;
   background-position: center;
-  background-color: #ccc;
 }
 
 .back {
@@ -138,41 +129,33 @@ header {
   color: #fff;
   transform: rotateY(180deg);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
-/* Footer container styling */
+/* Footer Styles */
 .main_footer {
-  background-color: black;
+  background-color: #222;
   color: white;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .footer__head {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px;
-  background-color: black;
-}
-
-.footer__head div {
-  flex: 1 1 200px;
-  font-size: 14px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .footer__head h4 {
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
 .footer__head a {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   font-size: 14px;
 }
 
@@ -182,21 +165,18 @@ header {
 
 .footer__head i {
   margin-right: 8px;
-  color: #e1e1e1;
 }
 
-/* Footer copyright */
+/* Footer Copyright */
 footer {
-  background-color: #6b7280;
-  color: #e1e1e1;
+  background-color: #111;
+  color: #888;
   text-align: center;
   padding: 10px;
   width: 100%;
-  margin-top: auto;
-  /* Pushes the footer to the bottom */
 }
 
-/* Declaration (scrolling text) */
+/* Scrolling Declaration */
 .declaration {
   animation: scroll-left 20s linear infinite;
   white-space: nowrap;
@@ -204,19 +184,18 @@ footer {
   padding: 10px 0;
 }
 
-/* Keyframe for scrolling declaration */
+/* Keyframe for scrolling text */
 @keyframes scroll-left {
   from {
     transform: translateX(100%);
   }
-
   to {
     transform: translateX(-100%);
   }
 }
 
-/* Responsive navigation */
-@media (max-width: 767px) {
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 1024px) {
   .navlinks {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
@@ -231,7 +210,6 @@ footer {
 
   .navlinks.active {
     max-height: 300px;
-    /* Adjust height when menu is active */
   }
 
   .navlinks li {
@@ -244,10 +222,13 @@ footer {
   }
 
   .image-table-container {
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .image-table-container {
     grid-template-columns: 1fr;
-    /* Display 1 column instead of 4 */
     gap: 20px;
-    padding: 20px;
   }
 }
