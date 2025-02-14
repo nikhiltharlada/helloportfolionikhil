@@ -237,7 +237,6 @@ footer {
         grid-template-columns: 1fr;
     }
     .btns {
-        display: flex;
         flex-direction: column;
         gap: 10px;
         padding: 0.4vh;
