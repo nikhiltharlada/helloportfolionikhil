@@ -214,7 +214,7 @@ header {
         max-height: 0;
         /* Initially hidden */
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        
       }
     
       .navlinks.active {
