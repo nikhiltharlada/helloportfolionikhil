@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* Basic reset and box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: gray;
-    color: white;
+    background-color: #f0f0f0; /* Light gray background for the page */
+    color: #333; /* Dark gray text color */
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
@@ -27,6 +26,10 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
+}
+
+h1 {
+    color: white;
 }
 
 nav {
@@ -69,25 +72,22 @@ nav {
 
 main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    background-color: grey;
+    padding-top: 60px; /* Adjust for fixed header */
+    background-color: #eee; /* Slightly lighter gray for main content */
 }
 
-.first-body {
-    flex: 1;
+.firstbody {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px; /* Add some padding around the content */
 }
 
-.middle-box {
-    flex-wrap: wrap;
-    flex-grow: initial;
-    padding: 20px;
+.middlebox {
     width: 100%;
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the content */
 }
 
 .image-table-container {
@@ -115,20 +115,23 @@ main {
     transform: rotateY(180deg);
 }
 
-.front, .back {
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
 }
 
 .front {
     background-size: cover;
     background-position: center;
-    background-color: #ccc;
-    object-fit: cover;
+    background-color: #ddd; /* Placeholder background color */
 }
 
 .back {
@@ -182,33 +185,18 @@ main {
     color: #e1e1e1;
 }
 
-footer {
+.footer-bottom { /* Style for the very bottom part of the footer */
     background-color: #6b7280;
     color: #e1e1e1;
     text-align: center;
     padding: 10px;
     width: 100%;
-    margin-top: auto;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
-.declaration {
-    animation: scroll-left 20s linear infinite;
-    white-space: nowrap;
-    text-align: center;
-    padding: 10px 0;
-}
 
-@keyframes scroll-left {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/* Mobile Sizes */
-@media (max-width: 480px) { /* Small mobile devices */
+/* Responsive Styles */
+@media (max-width: 767px) {
     .nav-links {
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
@@ -235,80 +223,10 @@ footer {
     }
 
     .image-table-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
+        grid-template-columns: 1fr; /* Single column on smaller screens */
     }
 
-    .btns {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0.4vh;
-        height: 250px;
-        width: fit-content;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 767px) { /* Medium mobile devices */
-    .nav-links {
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    .nav-links.active {
-        max-height: 300px;
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .image-table-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .btns {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0.4vh;
-        height: 250px;
-        width: fit-content;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 1024px) { /* Large mobile / tablet devices */
-    .nav-links {
-        flex-direction: row;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: static;
-        width: auto;
-        max-height: none;
-        overflow: visible;
-    }
-
-    .image-table-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .btns {
-        flex-direction: row;
-        gap: 20px;
-        padding: 1vh;
-        height: auto;
-        width: auto;
+    .middlebox {
+        padding: 10px; /* Reduce padding on smaller screens */
     }
 }
