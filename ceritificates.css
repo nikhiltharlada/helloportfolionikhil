@@ -237,8 +237,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
-img {
-    max-width: 100%;
-    height: auto;
-}
