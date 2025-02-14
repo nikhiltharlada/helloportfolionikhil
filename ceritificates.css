@@ -236,4 +236,14 @@ footer {
     .image-table-container {
         grid-template-columns: 1fr;
     }
+    .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0.4vh;
+        height: 250px;
+        width: fit-content;
+        margin: 0 auto;
+        
+    }
 }
