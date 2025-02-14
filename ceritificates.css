@@ -235,7 +235,9 @@ footer {
 
     .image-table-container {
         grid-template-columns: 1fr;
+        padding: 10px;
     }
+
     .btns {
         flex-direction: column;
         gap: 10px;
@@ -243,6 +245,5 @@ footer {
         height: 250px;
         width: fit-content;
         margin: 0 auto;
-        
     }
 }
