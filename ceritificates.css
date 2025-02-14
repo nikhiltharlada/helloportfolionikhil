@@ -204,34 +204,37 @@ header {
 /* Responsive Styles */
 @media (max-width: 767px) {
     .navlinks {
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        /* Adjust if your header height is different */
-        right: 0;
-        width: 100%;
-        max-height: 0;
-        /* Initially hidden */
-        overflow: hidden;
-        
-      }
-    
-      .navlinks.active {
-        max-height: 300px;
-        /* Adjust as needed */
-      }
-    
-      .navlinks li {
-        text-align: center;
-        padding: 10px 0;
-      }
-    
-      .menu-btn {
-        display: block;
-        /* Shown on smaller screens */
-      }
-    .image-table-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
     }
-}
+  
+    .navlinks.active {
+      max-height: 300px; /* Adjust height when menu is active */
+      /* Adjust height when menu is active */
+    }
+  
+    .navlinks li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .menu-btn {
+      display: block;
+    }
+    .image-table-container {
+      display: grid;
+      grid-template-columns: 1fr; /* Display 1 column instead of 4 */
+
+      /* Display 1 column instead of 4 */
+      gap: 20px;
+      padding: 20px;
+    }
+  }
+  
