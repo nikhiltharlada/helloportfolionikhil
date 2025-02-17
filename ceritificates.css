@@ -204,14 +204,14 @@ header {
 /* Responsive Styles */
 @media (max-width: 767px) {
   body {
-    width:100%;
+    width:767px;
   }
     .navlinks {
       flex-direction: column;
       background-color: rgba(0, 0, 0, 0.9);
       position: absolute;
-      top:0px;
-      right:0px;
+      top: 60px;
+      right:10px;
       width: 100%;
       max-height: 0;
       overflow: hidden;
@@ -219,8 +219,7 @@ header {
     }
   
     .navlinks.active {
-      max-height: 360px;
-      overflow-y: auto;/* Adjust height when menu is active */
+      max-height: 360px; /* Adjust height when menu is active */
       /* Adjust height when menu is active */
     }
   
@@ -236,13 +235,12 @@ header {
       right:14px;
     }
     .image-table-container {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 1fr; /* Display 1 column instead of 4 */
 
+      /* Display 1 column instead of 4 */
+      gap: 20px;
+      padding: 20px;
     }
-    .firstbody{
-      flex-direction: column;
-      padding:10px;
-    }
-
   }
   
