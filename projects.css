@@ -273,6 +273,9 @@ footer {
 
 /* Responsive Navigation */
 @media (max-width: 767px) {
+  body{
+    width:767px;
+  }
   .navlinks {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
