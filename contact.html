@@ -21,49 +21,59 @@
 
   <div class="firstbody">
     <div class="middlebox">
-                    <section class="contact-content">
-                        <h2>Get in Touch</h2>
-                        <p>Feel free to reach out to us via the form below.</p>
-                        <form class="contact-form">
-                            <input type="text" id="name" placeholder="Name">
-                            <input type="email" id="email" placeholder="Email">
-                            <textarea id="message" placeholder="Message" rows="5"></textarea>
-                            <button type="submit" id="submit-btn">Send</button>
-                        </form>
-                        <p id="form-message" style="display: none; color: green; margin-top: 10px;">Message sent
-                            successfully!</p>
-                    </section>
-                </div>
-            </div>
-            <div class="footer__head">
-                <div>
-                    <h4>CONTACT INFO</h4>
-                    <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
-                    <p><i class="fa-solid fa-phone"></i> (+91) 7013428310</p>
-                    <p><i class="fa-regular fa-envelope"></i> nikhiltharlada310@gmail.com</p>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <p><a href="index.html">Home</a></p>
-                    <p><a href="about.html">About</a></p>
-                    <p><a href="ceritificates.html">Certificates</a></p>
-                    <p><a href="projects.html">Projects</a></p>
-                </div>
-                <div>
-                    <h4>Social Media</h4>
-                    <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>
-                            Instagram</a></p>
-                    <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                    </p>
-                    <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
-                    </p>
-                </div>
-            
-            </div>
-            <footer>
-                <p>© 2025 Developed by Nikhil</p>
-            </footer>
-            
+      <section class="contact-content">
+        <h2>Get in Touch</h2>
+        <p>Feel free to reach out to us via the form below.</p>
+        <form class="contact-form"
+           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-18LmhCUw-8IwfujgierJgtkm3ytbRbx5nhRnllTdzPXHqQ/formResponse" target="_self" method="POST">
+          <input type="text" id="name" placeholder="Name" name="entry.147198747" required>
+          <input type="email" id="email" placeholder="Email" name="entry.714503929" required>
+          <textarea id="message" placeholder="Message" rows="6" name="entry.1070860282" required></textarea>
+          <button type="submit" id="submit-btn">Send</button>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+        <p id="form-message" style="display: none; color: green; margin-top: 10px;">Message sent
+          successfully!</p>
+      </section>
+    </div>
+  </div>
+  <script>
+    var submitted = false;
+    document.querySelector("form").addEventListener("submit", function(e) {
+      setTimeout(function() {
+          alert("Form submitted successfully!");
+      }, 1000);
+  });
+  </script>
+  <div class="footer__head">
+    <div>
+      <h4>CONTACT INFO</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
+      <p><i class="fa-solid fa-phone"></i> (+91) 7013428310</p>
+      <p><i class="fa-regular fa-envelope"></i> nikhiltharlada310@gmail.com</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="ceritificates.html">Certificates</a></p>
+      <p><a href="projects.html">Projects</a></p>
+    </div>
+    <div>
+      <h4>Social Media</h4>
+      <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>
+          Instagram</a></p>
+      <p><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      </p>
+      <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+      </p>
+    </div>
+
+  </div>
+  <footer>
+    <p>© 2025 Developed by Nikhil</p>
+  </footer>
+
 </body>
 
 </html>
