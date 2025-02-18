@@ -229,9 +229,15 @@ header {
   
     .menu-btn {
       display: block;
-      position:absolute;
-      top:16px;
-      right:50px;
+      position: fixed; /* Fix it at the top-right */
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 100; 
     }
     .image-table-container {
       display: grid;
