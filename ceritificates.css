@@ -210,6 +210,7 @@ header {
       position: absolute;
       top: 60px;
       right:0px;
+      width:70%;
       max-height: 0;
       width:767px;
       overflow: hidden;
