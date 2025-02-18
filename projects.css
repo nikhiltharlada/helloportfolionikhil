@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* styles.css */
-
 /* General Reset and Body Styling */
 * {
   margin: 0;
@@ -37,7 +35,6 @@ header {
   list-style: none;
   transition: max-height 0.3s ease;
   overflow: hidden;
-  /* Important for mobile menu */
 }
 
 .navlinks li a {
@@ -52,7 +49,6 @@ header {
 
 .menu-btn {
   display: none;
-  /* Hidden by default on larger screens */
   background: none;
   border: none;
   color: white;
@@ -70,10 +66,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Vertically center content */
   text-align: center;
   padding-top: 60px;
-  /* Adjust for fixed header */
   background-color: grey;
 }
 
@@ -81,7 +75,6 @@ header {
   flex-wrap: wrap;
   flex-grow: initial;
   max-width: 80%;
-  /* Prevents content from stretching too wide */
 }
 
 .content {
@@ -90,7 +83,6 @@ header {
 
 .active {
   display: block;
-  /* Show active content */
 }
 
 .title {
@@ -128,21 +120,27 @@ header {
   filter: blur(4px);
 }
 
+/* Image Gallery */
 .image-gallery {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 20px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .image-gallery figure {
   margin: 0 1rem 1rem 0;
   text-align: center;
+  width: calc(33.33% - 1rem); /* Three images per row */
+  max-width: calc(33.33% - 1rem); /* Prevents exceeding container width */
+  box-sizing: border-box;
 }
 
 .image-gallery img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -161,7 +159,6 @@ header {
 .collapsible-image {
   background-color: transparent;
   color: black;
-  /* Or a darker color */
   cursor: pointer;
   border: none;
   text-align: left;
@@ -173,7 +170,6 @@ header {
 .collapsible-image:hover,
 .collapsible-image.active {
   color: #f5f5f5;
-  /* Or a lighter color */
 }
 
 .content-collapsible-image {
@@ -185,7 +181,6 @@ header {
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
   max-height: 200px;
-  /* Adjust as needed */
 }
 
 .content-collapsible-image.show {
@@ -193,16 +188,14 @@ header {
 }
 
 .collapsible-image:after {
-  content: '\002B';
-  /* Plus sign */
+  content: '\002B'; /* Plus sign */
   color: gray;
   float: right;
   margin-left: 5px;
 }
 
 .collapsible-image.active:after {
-  content: "\2212";
-  /* Minus sign */
+  content: "\2212"; /* Minus sign */
 }
 
 /* Footer */
@@ -251,7 +244,6 @@ footer {
   padding: 10px;
   width: 100%;
   margin-top: auto;
-  /* Push footer to the bottom */
 }
 
 .declaration {
@@ -265,7 +257,6 @@ footer {
   from {
     transform: translateX(100%);
   }
-
   to {
     transform: translateX(-100%);
   }
@@ -273,26 +264,24 @@ footer {
 
 /* Responsive Navigation */
 @media (max-width: 767px) {
-  body{
-    width:767px;
+  body {
+    width: 767px;
   }
+
   .navlinks {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 60px;
-    /* Adjust if your header height is different */
     right: 0;
     width: 100%;
     max-height: 0;
-    /* Initially hidden */
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
 
   .navlinks.active {
     max-height: 300px;
-    /* Adjust as needed */
   }
 
   .navlinks li {
@@ -302,7 +291,6 @@ footer {
 
   .menu-btn {
     display: block;
-    /* Shown on smaller screens */
   }
 
   .btns {
@@ -311,10 +299,20 @@ footer {
     gap: 10px;
     padding: 0.4vh;
     height: 250px;
-    /* Or auto */
     width: fit-content;
-    /* Or a specific width like 100px */
     margin: 0 auto;
-    /* Center the buttons */
+  }
+}
+
+/* Image Gallery Responsive Adjustments */
+@media (max-width: 768px) {
+  .image-gallery figure {
+    width: calc(50% - 1rem); /* Two images per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery figure {
+    width: 100%; /* One image per row on mobile */
   }
 }
