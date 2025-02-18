@@ -320,4 +320,7 @@ footer {
     margin: 0 auto;
     /* Center the buttons */
   }
+  .main_footer{
+    width:100%;
+  }
 }
