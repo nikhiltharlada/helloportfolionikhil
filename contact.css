@@ -111,7 +111,11 @@ header {
   border: none;
   cursor: pointer;
 }
-
+.submission{
+  display: none; 
+  color: green; 
+  margin-top: 10px;
+}
 /* Footer Styling */
 .footer__head {
   display: flex;
