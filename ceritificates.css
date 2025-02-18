@@ -27,9 +27,10 @@ header {
   align-items: center;
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100%;
-  z-index: 10;
+  position:fixed;
+  height:10%;
+  width:98%;
+  z-index:10;
 }
 
 /* Navigation links */
@@ -208,9 +209,9 @@ header {
       background-color: rgba(0, 0, 0, 0.9);
       position: absolute;
       top: 60px;
-      right:10px;
-      width: 100%;
+      right:0px;
       max-height: 0;
+      width:767px;
       overflow: hidden;
       transition: max-height 0.3s ease;
 
@@ -230,14 +231,14 @@ header {
       display: block;
       position:absolute;
       top:16px;
-      right:14px;
+      right:50px;
     }
     .image-table-container {
       display: grid;
       grid-template-columns: 1fr; /* Display 1 column instead of 4 */
 
       /* Display 1 column instead of 4 */
-      gap: 20px;
+      gap: 25px;
       padding: 20px;
     }
   }
