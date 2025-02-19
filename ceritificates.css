@@ -74,7 +74,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding:70px;
 }
 
 .middlebox {
@@ -124,17 +124,34 @@ header {
   justify-content: center;
   align-items: center;
 }
-
-.front {
-  
-  background-position: center;
-  background-size: contain;   /* Ensures the full image is visible */
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  aspect-ratio: auto;
+.image-card {
+  width: 100%; /* Adjust width as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.front {
+  width: auto;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Default square aspect ratio */
+  background-size: contain; /* Ensures full visibility */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Adjust height based on image orientation */
+.front.landscape {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21/ 14; /* Standard landscape ratio */
+}
+
+.front.portrait {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 14 /21 ; /* Standard portrait ratio */
+}
 .back {
   background-color: #333;
   color: #fff;
