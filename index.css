@@ -109,7 +109,7 @@ footer {
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-}
+  padding: 20px 10px;}
 
 .footer__head div {
   flex: 1 1 200px;
