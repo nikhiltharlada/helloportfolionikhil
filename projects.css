@@ -8,7 +8,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html,body{
+  overflow-x: hidden;
+  width:100vw;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -16,8 +19,7 @@ body {
   background-color: gray;
   color: white;
   font-family: Arial, sans-serif;
-  overflow-x: hidden;
-  width: 100%; /* Ensure full width for body */
+  /* Ensure full width for body */
 }
 
 /* Header */
@@ -29,15 +31,14 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 
 .navlinks {
   display: flex;
   gap: 20px;
   list-style: none;
-  transition: max-height 0.3s ease;
-  overflow: hidden;
+  
   /* Important for mobile menu */
 }
 
@@ -50,19 +51,21 @@ header {
 .navlinks li a:hover {
   color: gray;
 }
-
 .menu-btn {
   display: none;
-  /* Hidden by default on larger screens */
   background: none;
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 200;
 }
 
 .menu-btn i {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
 }
 
 /* Main Content */
@@ -74,15 +77,15 @@ header {
   align-items: center;
   /* Vertically center content */
   text-align: center;
-  padding-top: 60px;
+  padding-top: 20px;
   /* Adjust for fixed header */
   background-color: grey;
 }
 
 .middlebox {
-  flex-wrap: wrap;
-  flex-grow: initial;
-  max-width: 80%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   /* Prevents content from stretching too wide */
 }
 
@@ -275,26 +278,22 @@ footer {
 
 /* Responsive Navigation */
 @media (max-width: 767px) {
-  body {
-    width:50%;
-  }
-
   .navlinks {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
+    position: fixed;
     top: 60px;
-    /* Adjust if your header height is different */
     right: 0;
     width: 100%;
     max-height: 0;
-    /* Initially hidden */
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease-in-out;
+    text-align: center;
+    z-index: 99;
   }
 
   .navlinks.active {
-    max-height: 300px;
+    max-height: 400px;
     /* Adjust as needed */
   }
 
