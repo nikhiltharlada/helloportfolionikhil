@@ -312,7 +312,7 @@ footer {
     flex-direction: column;
     gap: 10px;
     padding: 0.4vh;
-    height: auto;
+    height:5%;
     /* Adjust the height */
     width: fit-content;
     /* Or a specific width like 100px */
