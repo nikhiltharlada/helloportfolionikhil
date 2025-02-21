@@ -38,11 +38,14 @@
   </div>
   <script>
     var submitted = false;
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form from submitting
-      alert("Your response has been recorded."); // Show alert
-      this.reset(); // Reset form fields
+    document.querySelector("form").addEventListener("submit", function(e) {
+      setTimeout(function() {
+          alert("Form submitted successfully!");
+      }, 1000);
+      E.preventDefault();
+      this.reset();
   });
+  
   </script>
   <div class="footer__head">
     <div>
