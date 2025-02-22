@@ -38,13 +38,36 @@
     </div>
   </div>
   <script>
-    var submitted = false;
-    document.querySelector("form").addEventListener("submit", function(e) {
-      setTimeout(function() {
-          alert("Form submitted successfully!");
-      }, 1000);
-    e.preventDefault()
-  });
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevents page reload
+  
+      let formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      };
+  
+      fetch('https://script.google.com/macros/s/AKfycbzblzIyEz25J0WqwiIbWuoiiIUQnmz4nKYTXa0TZxMVQUfTl80_5IiBqcPy41HGSKAqlg/exec', {  // Replace with your Apps Script URL
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data.trim() === "Success") {
+          alert("Form Submitted Successfully! You will receive a confirmation email.");
+          document.getElementById("contact-form").reset(); // Clear form fields
+        } else {
+          alert("Error submitting form: " + data);
+        }
+      })
+      .catch(error => {
+        alert("Error: " + error);
+        console.error("Error:", error);
+      });
+    });
   </script>
   <div class="footer__head">
     <div>
