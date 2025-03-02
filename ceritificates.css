@@ -294,7 +294,7 @@ footer {
 .front.landscape {
   width: 100%;
   height: auto;
-  aspect-ratio: 30/ 22; /* Standard landscape ratio */
+  aspect-ratio: 33/ 25; /* Standard landscape ratio */
 }
 
 .front.portrait {
@@ -313,6 +313,8 @@ footer {
   text-align: center;
   padding: 1px;
   scrollbar-width:auto;
+  background-position-x: 100%;
+  background-position-y: 100%;
 }
 .back a{
   color:white;
