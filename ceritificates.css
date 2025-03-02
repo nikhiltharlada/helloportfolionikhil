@@ -144,13 +144,13 @@ header {
 .front.landscape {
   width: 100%;
   height: auto;
-  aspect-ratio: 21/ 14; /* Standard landscape ratio */
+  aspect-ratio: 27/ 20; /* Standard landscape ratio */
 }
 
 .front.portrait {
   width: auto;
   height: 100%;
-  aspect-ratio: 14 /21 ; /* Standard portrait ratio */
+  aspect-ratio: 20 /27 ; /* Standard portrait ratio */
 }
 .back {
   background-color: #333;
@@ -281,3 +281,38 @@ footer {
 }
 }
 
+@media (max-width<767px){
+  navlinks {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    text-align: center;
+    z-index: 99;
+  }
+
+  .navlinks.active {
+    max-height: 400px;
+  }
+
+  .navlinks li {
+    padding: 12px 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+  .image-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back{
+  padding:50px;
+}
+}
