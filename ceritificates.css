@@ -284,13 +284,13 @@ footer {
 .front.landscape {
   width: 100%;
   height: auto;
-  aspect-ratio: 26/ 18; /* Standard landscape ratio */
+  aspect-ratio: 30/ 22; /* Standard landscape ratio */
 }
 
 .front.portrait {
   width: auto;
   height: 100%;
-  aspect-ratio: 20 /28 ; /* Standard portrait ratio */
+  aspect-ratio: 22/30 ; /* Standard portrait ratio */
 }
 .back {
   background-color: #333;
