@@ -144,13 +144,13 @@ header {
 .front.landscape {
   width: 100%;
   height: auto;
-  aspect-ratio: 27/ 20; /* Standard landscape ratio */
+  aspect-ratio: 21/ 14; /* Standard landscape ratio */
 }
 
 .front.portrait {
   width: auto;
   height: 100%;
-  aspect-ratio: 20 /27 ; /* Standard portrait ratio */
+  aspect-ratio: 14 /21 ; /* Standard portrait ratio */
 }
 .back {
   background-color: #333;
@@ -163,11 +163,6 @@ header {
   text-align: center;
   padding: 20px;
   
-}
-.back p{
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
 }
 .back a{
   color:white;
@@ -208,6 +203,7 @@ header {
 
 .footer__head a:hover {
   text-decoration: underline;
+  color: white;
 }
 
 .footer__head i {
@@ -271,78 +267,49 @@ footer {
   .menu-btn {
     display: block;
   }
+
+  /* Fix Image Layout */
   .image-table-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+  }
+.front {
+  width: auto;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Default square aspect ratio */
+  background-size: contain; /* Ensures full visibility */
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.back{
-  padding:10px;
+
+/* Adjust height based on image orientation */
+.front.landscape {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 26/ 18; /* Standard landscape ratio */
 }
+
+.front.portrait {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 20 /28 ; /* Standard portrait ratio */
 }
-
-@media (max-width<767px){
-  navlinks {
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    text-align: center;
-    z-index: 99;
-  }
-
-  .navlinks.active {
-    max-height: 400px;
-  }
-
-  .navlinks li {
-    padding: 12px 0;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-  .back {
-    padding: 10px; /* Adjust padding for smaller screens */
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 100%; /* Ensure it doesn't exceed the card height */
-    box-sizing: border-box; /* Include padding in the height calculation */
-    scrollbar-width: thin; /* Make scrollbar visible */
-    scrollbar-color: #888 #f1f1f1; /* Style scrollbar */
-  }
-
-  .back p {
-    font-size: 14px; /* Adjust font size for better readability */
-    margin: 5px 0; /* Adjust margins for better spacing */
-  }
-
-  .back h2 {
-    font-size: 18px; /* Adjust heading size for better readability */
-    margin: 10px 0; /* Adjust margins for better spacing */
-  }
-
-  .back a {
-    font-size:5px; /* Adjust link size for better readability */
-    margin: 10px 0; /* Adjust margins for better spacing */
-  }
-
-  .image-card {
-    width: 90%; /* Adjust width for smaller screens */
-    max-width: 300px; /* Set a max-width */
-    margin: 10px auto; /* Center the card */
-  }
-
-  .front {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1; /* Maintain aspect ratio */
-    background-size: contain; /* Ensure full visibility */
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.back {
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1px;
+  scrollbar-width:auto;
+}
+.back a{
+  color:white;
+  text-decoration: none;
+}
+.back a:hover{
+  color:gray;
+}
 }
