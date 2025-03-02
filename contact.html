@@ -24,50 +24,32 @@
       <section class="contact-content">
         <h2>Get in Touch</h2>
         <p>Feel free to reach out to us via the form below.</p>
-        <form class="contact-form"
-           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-18LmhCUw-8IwfujgierJgtkm3ytbRbx5nhRnllTdzPXHqQ/formResponse" target="_self" method="POST">
-          <input type="text" id="name" placeholder="Name" name="entry.147198747" required>
-          <input type="email" id="email" placeholder="Email" name="entry.714503929" required>
-          <textarea id="message" placeholder="Message" rows="6" name="entry.1070860282" required></textarea>
-          <button type="submit" id="submit-btn">Send</button>
+        <form method="post" action="https://script.google.com/macros/s/AKfycbybTGB_fyN9NF5UaNdwAXQqrRUi22hMwobQIlvE3xA4V1nOMrB_ZVWX6RV9acSU3Lyjmg/exec" class="contact-form">
+          <input type="text" name="your-name" placeholder="Name">
+      <input type="text" name="your-number" placeholder="Number">
+      <input type="email" name="your-email" placeholder="Email">
+      <textarea name="message" rows="7" placeholder="Your Message">
+      </textarea>
+      <input type="submit" value="Submit" id="submit">
         </form>
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
-        <p class="submission">Message sent
-          successfully!</p>
+
       </section>
     </div>
   </div>
   <script>
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevents page reload
+    const scriptURL = 'Your Google App Script URL'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
   
-      let formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-      };
+  e.preventDefault()
   
-      fetch('https://script.google.com/macros/s/AKfycbzblzIyEz25J0WqwiIbWuoiiIUQnmz4nKYTXa0TZxMVQUfTl80_5IiBqcPy41HGSKAqlg/exec', {  // Replace with your Apps Script URL
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(response => response.text())
-      .then(data => {
-        if (data.trim() === "Success") {
-          alert("Form Submitted Successfully! You will receive a confirmation email.");
-          document.getElementById("contact-form").reset(); // Clear form fields
-        } else {
-          alert("Error submitting form: " + data);
-        }
-      })
-      .catch(error => {
-        alert("Error: " + error);
-        console.error("Error:", error);
-      });
-    });
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! Form is submitted" ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
   </script>
   <div class="footer__head">
     <div>

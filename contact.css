@@ -104,17 +104,16 @@ header {
   display: block;
 }
 
-#submit-btn {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+#submit{
+	border: none;
+	background-color: orangered;
+	color: white;
+	width: 200px;
+	margin-top: 10px;
+	border-radius: 5px;
 }
-.submission{
-  display: none; 
-  color: green; 
-  margin-top: 10px;
+#submit:hover{
+	background-color: #333333;
 }
 /* Footer Styling */
 .footer__head {
