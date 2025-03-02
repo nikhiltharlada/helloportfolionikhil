@@ -307,12 +307,51 @@ footer {
   .menu-btn {
     display: block;
   }
-  .image-table-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.back{
-  padding:50px;
-}
+  .back {
+    padding: 10px; /* Adjust padding for smaller screens */
+    overflow-y: auto; /* Allow scrolling */
+    max-height: 100%; /* Ensure it doesn't exceed the card height */
+    box-sizing: border-box; /* Include padding in the height calculation */
+    font-size: 14px; /* Adjust font size for better readability */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  }
+
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .back::-webkit-scrollbar {
+    display: none;
+  }
+
+  .back h2 {
+    font-size: 18px; /* Adjust heading size for better readability */
+    margin: 10px 0; /* Adjust margins for better spacing */
+  }
+
+  .back p {
+    font-size: 14px; /* Adjust paragraph font size */
+    margin: 5px 0; /* Adjust margins for better spacing */
+    line-height: 1.4; /* Improve line spacing */
+    word-wrap: break-word; /* Ensure long words break and wrap */
+  }
+
+  .back a {
+    font-size: 14px; /* Adjust link size for better readability */
+    margin: 10px 0; /* Adjust margins for better spacing */
+    display: inline-block; /* Ensure links are properly aligned */
+  }
+
+  .image-card {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Set a max-width */
+    margin: 10px auto; /* Center the card */
+  }
+
+  .front {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Maintain aspect ratio */
+    background-size: contain; /* Ensure full visibility */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
