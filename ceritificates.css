@@ -164,6 +164,11 @@ header {
   padding: 20px;
   
 }
+.back p{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
 .back a{
   color:white;
   text-decoration: none;
@@ -266,6 +271,11 @@ footer {
   .menu-btn {
     display: block;
   }
+  .text-container {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+}
 
   /* Fix Image Layout */
   .image-table-container {
