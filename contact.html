@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="contact.css">
 </head>
-
 <body>
+
   <header>
     <h1>Portfolio</h1>
     <ul class="navlinks">
@@ -23,60 +20,84 @@
     <div class="middlebox">
       <section class="contact-content">
         <h2>Get in Touch</h2>
-        <p>Feel free to reach out to us via the form below.</p>
-        <form method="post" action="https://script.google.com/macros/s/AKfycbybTGB_fyN9NF5UaNdwAXQqrRUi22hMwobQIlvE3xA4V1nOMrB_ZVWX6RV9acSU3Lyjmg/exec" class="contact-form">
-          <input type="text" name="your-name" placeholder="Name">
-      <input type="text" name="your-number" placeholder="Number">
-      <input type="email" name="your-email" placeholder="Email">
-      <textarea name="message" rows="7" placeholder="Your Message">
-      </textarea>
-      <input type="submit" value="Submit" id="submit">
+        <p>Feel free to reach out via the form below.</p>
+        <form id="contactForm" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="text" name="number" placeholder="Your Number" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" id="submit">Submit</button>
         </form>
-
+        <p id="responseMessage" class="message"></p>
       </section>
     </div>
   </div>
+
   <script>
-    const scriptURL = 'Your Google App Script URL'
-
-const form = document.forms['contact-form']
-
-form.addEventListener('submit', e => {
   
-  e.preventDefault()
-  
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! Form is submitted" ))
-  .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
-})
-  </script>
+    
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx8odSCmLMUP0hEjZAbnCSevSq5Zrbfp54zzPzU9aBK5ekFgrRoRKbN_Pqj_LmHOhijuA/exec"; // Replace with your Google Apps Script Web App URL
+      const contactForm = document.getElementById("contactForm");
+      const responseMessage = document.getElementById("responseMessage");
+      const submitButton = document.getElementById("submit");
+    
+      contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+    
+        // Show loading message and disable the submit button
+        responseMessage.textContent = "Submitting...";
+        responseMessage.style.color = "orange";
+        submitButton.disabled = true;
+    
+        let formData = new FormData(contactForm);
+    
+        try {
+          const response = await fetch(scriptURL, { method: "POST", body: formData });
+          const data = await response.json();
+    
+          if (data.status === "success") {
+            responseMessage.textContent = "Form submitted successfully!";
+            responseMessage.style.color = "green";
+            contactForm.reset(); // Clear form fields after submission
+          } else {
+            responseMessage.textContent = "Error: " + data.message;
+            responseMessage.style.color = "red";
+          }
+        } catch (error) {
+          responseMessage.textContent = "Error submitting form!";
+          responseMessage.style.color = "red";
+          console.error("Submission error:", error);
+        }
+    
+        // Re-enable the submit button after submission
+        submitButton.disabled = false;
+      });
+    
+    
+    </script>
+
   <div class="footer__head">
     <div>
       <h4>Quick Links</h4>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="about.html">About</a></p>
-            <p><a href="projects.html">Projects</a></p>
-            <p><a href="certificates.html">Certificates</a></p>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="projects.html">Projects</a></p>
+      <p><a href="certificates.html">Certificates</a></p>
     </div>
     <div>
       <h4>Connect with Me</h4>
-            <p><a href="https://www.linkedin.com/in/nikhiltharlada" target="_blank">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
-            <p><a href="https://github.com/nikhiltharlada" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub</a></p>
+      <p><a href="https://www.linkedin.com/in/nikhiltharlada" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+      <p><a href="https://github.com/nikhiltharlada" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></p>
     </div>
     <div>
       <h4>Location</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
+      <p><i class="fa-solid fa-location-dot"></i> Andhra Pradesh, India</p>
     </div>
   </div>
 
-  </div>
   <footer>
     <p>© 2025 Developed by Nikhil</p>
   </footer>
 
 </body>
-
 </html>
