@@ -271,54 +271,48 @@ footer {
   .menu-btn {
     display: block;
   }
-  .text-container {
-    word-wrap: break-word;
-    white-space: normal;
-    overflow: visible;
+  .image-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-  /* Fix Image Layout */
-  .image-table-container {
-    grid-template-columns: 1fr;
-  }
+.image-card {
+  width: 90%; /* Adjust width for smaller screens */
+  max-width: 300px; /* Set a max-width */
+  margin: 10px auto; /* Center the card */
+}
+
 .front {
-  width: auto;
+  width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1; /* Default square aspect ratio */
-  background-size: contain; /* Ensures full visibility */
+  aspect-ratio: 1 / 1; /* Maintain aspect ratio */
+  background-size: contain; /* Ensure full visibility */
   background-position: center;
   background-repeat: no-repeat;
 }
-
 /* Adjust height based on image orientation */
-.front.landscape {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 33/ 25; /* Standard landscape ratio */
+
+.back {
+  padding: 10px; /* Adjust padding for smaller screens */
+  overflow-y: auto; /* Add scroll if content overflows */
+  max-height: 100%; /* Ensure it doesn't exceed the card height */
+  box-sizing: border-box; /* Include padding in the height calculation */
 }
 
-.front.portrait {
-  width: auto;
-  height: 100%;
-  aspect-ratio: 22/30 ; /* Standard portrait ratio */
+.back p {
+  font-size: 14px; /* Adjust font size for better readability */
+  margin: 5px 0; /* Adjust margins for better spacing */
 }
-.back {
-  background-color: #333;
-  color: #fff;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1px;
-  scrollbar-width:auto;
-  background-position-x: 100%;
-  background-position-y: 100%;
+
+.back h2 {
+  font-size: 18px; /* Adjust heading size for better readability */
+  margin: 10px 0; /* Adjust margins for better spacing */
 }
-.back a{
-  color:white;
-  text-decoration: none;
+
+.back a {
+  font-size: 14px; /* Adjust link size for better readability */
+  margin: 10px 0; /* Adjust margins for better spacing */
 }
 .back a:hover{
   color:gray;
