@@ -215,14 +215,14 @@ header {
   background-color: black;
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 
 .footer__head {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding: 20px;
-  background-color: black;
 }
 
 .footer__head div {
@@ -244,11 +244,6 @@ header {
   text-decoration: underline;
 }
 
-.footer__head i {
-  margin-right: 8px;
-  color: #e1e1e1;
-}
-
 footer {
   background-color: #6b7280;
   color: #e1e1e1;
@@ -256,9 +251,8 @@ footer {
   padding: 10px;
   width: 100%;
   margin-top: auto;
-  /* Push footer to the bottom */
+  
 }
-
 .declaration {
   animation: scroll-left 18s linear infinite;
   white-space: nowrap;
